@@ -1,0 +1,17 @@
+float[32] beta = 16;
+float[32] theta = pi;
+float[32] gamma = 64;
+qubit input;
+qubit input1;
+qubit input3;
+qubit[2] ancilla;
+qubit[3] ancilla1;
+x input;
+y input;
+y input3;
+cx ancilla[0], ancilla1[1];
+z input1;
+cswap ancilla1[2], input, ancilla[1];
+s ancilla1[2];
+ccx input, input1, input3;
+t ancilla[0];
